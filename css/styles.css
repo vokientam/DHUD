@@ -1,0 +1,81 @@
+
+#container {
+  position: relative;
+
+}
+#imageView {
+  border: 5px solid #000;
+  position: absolute;
+  left: 300px;
+}
+#gridView {
+  border: 5px solid #000;
+  position: absolute;
+  left: 300px;
+}
+#imageTemp {
+  position: absolute;
+  top: 5px;
+  left: 305px;
+  cursor: crosshair;
+}
+#toolbar {
+
+  width: 300px;
+}
+.tool-container {
+
+}
+.col-1 {
+  width: 50%;
+  float: left;
+  padding-top: 10px;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:15px;
+
+}
+.col-2 {
+  width: 50%;
+  float: right;
+  padding-top: 10px;
+
+}
+select {
+ font-family:Verdana, Geneva, sans-serif;
+ font-size:12px;
+ font-weight: bold;
+ background-color:#EAEAEA;
+}
+
+#colorPick {
+  cursor:pointer;
+}
+#colorTable {
+ width:231px;
+ height:132px;
+ position: absolute;
+ background-color: #000000;
+ display:none;
+ cursor:pointer;
+ }
+
+.color {
+   position:relative;
+   height:7px;
+   width:7px;
+   float:left;
+   padding:1px;
+   margin:1px;
+   }
+.color:hover{ border:solid 1px #FFF; margin:0px; }
+#currentColor {
+  width: 30px;
+  height: 16px;
+  background-color: black;
+}
+#clear {
+  cursor:pointer;
+}
+#save {
+  cursor: pointer;
+}

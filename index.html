@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paint</title>
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/paint.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+  <div id="toolbar">
+
+    <div class = "tool-container">
+      <div class="col-1">Tool</div>
+        <select class="col-2" id="dtool">
+          <option value="line">Line</option>
+          <option value="triangleR">Right Triangle</option>
+          <option value="triangleI">Isosceles Triangle</option>
+          <option value="rect">Rectangle</option>
+          <option value="circle">Circle</option>
+          <option value="pencil">Pencil</option>
+          <option value="eraser">Eraser</option>
+        </select>
+    </div>
+
+    <div class = "tool-container">
+      <div class="col-1">Line width</div>
+        <select class="col-2" id="linewidth">
+          <option value="lw1">1</option>
+          <option value="lw5">5</option>
+          <option value="lw10">10</option>
+          <option value="lw15">15</option>
+        </select>
+    </div>
+
+    <div class = "tool-container">
+      <!-- Toggle Color Button -->
+      <div class="col-1">Color</div>
+      <div class="col-2" >
+        <img src="images/color-wheel.png" alt="Toggle Color" width="14" height="14" id="colorPick" title="Pick Color"/>
+      </div>
+      <!-- Color Table  -->
+      <div id="colorTable"></div>
+    </div>
+
+    <div class = "tool-container">
+      <div class="col-1">Current Color</div>
+      <div class="col-2">
+        <div  id="currentColor">
+        </div>
+      </div>
+    </div>
+
+    <div class = "tool-container">
+      <div class="col-1">Gridlines</div>
+      <div class="col-2">
+        <img src="images/off.png" width="60" height="16" id="gridSwitch" title="Show/Hide Gridlines"/>
+      </div>
+    </div>
+
+    <div class = "tool-container">
+      <div class="col-1">Clear All</div>
+      <div class="col-2" >
+        <img src="images/clear.png" width="16" height="16" id="clear" title="Clear the entire paper"/>
+      </div>
+    </div>
+
+    <div class = "tool-container">
+      <div class="col-1">Save Image</div>
+      <div class="col-2" >
+        <img src="images/save.png" width="16" height="16" onclick="saveImage()" id="save" title="Save image"/>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Paint Area -->
+  <div id="container">
+    <canvas id="imageView" width="1000" height="500">
+      <p>Unfortunately, your browser is currently unsupported by our web application. We are sorry for the inconvenience.
+         Please use one of the supported browsers listed below, or draw the image you want using an offline tool.</p>
+         <p>Supported browsers:
+           <a href="http://www.opera.com">Opera</a>,
+           <a href="http://www.mozilla.com">Firefox</a>,
+           <a href="http://www.apple.com/safari">Safari</a>, and
+           <a href="http://www.konqueror.org">Konqueror</a>.
+         </p>
+    </canvas>
+    <canvas id="gridView" width="1000" height="500">
+    </canvas>
+  </div>
+
+  </body>
+</html>
