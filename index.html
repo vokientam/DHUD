@@ -1,97 +1,391 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Paint</title>
-
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/paint.js" type="text/javascript" charset="utf-8"></script>
+<html lang="vi"><head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Giftpop Voucher</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=vietnamese" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128" rel="stylesheet">
+	<script src="https://z.giftpop.vn/common/jquery-1.11.3.min.js?v=108"></script>
+	<link href="https://z.giftpop.vn/common/coupon.css?v=108" rel="stylesheet">
 </head>
 <body>
+<div class="wrap">
+	<input type="hidden" id="Lang" name="Lang" value="vn">
+	<input type="hidden" id="chkstep" name="chkstep" value="pinchk">
+	<input type="hidden" id="request_status" name="request_status" value="yes">
+	<input type="hidden" id="cashbalance" name="cashbalance" value="">
+	<input type="hidden" name="error" id="error" value="">
 
-  <div id="toolbar">
+    	 <div id="coupon_vn" style="width:100%;padding:0px;">
+		<div class="inner">
+			<div class="header">
+									<h2><a style="display: block; position: relative;" href="https://www.giftpop.vn"> <img src="http://img.giftpop.vn/coupon/images/logo.png" alt="Giftpop Logo" style="width:80%"></a></h2>
+								<h3 class="popupFlag">
+					<img src="http://www.giftpop.vn/resources_en/images/common/flag_vietnam.gif" alt="">
+					<dl>
+						<dt style="top:0px;height: 30px;"><a onclick="goVr('vn')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_vietnam.gif" alt=""></a></dt>
+						<dt style="top:60px;height: 30px;"><a onclick="goVr('en')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_eng.gif" alt=""></a></dt>
+						<dt style="top:30px;height: 30px;"><a onclick="goVr('kr')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_korea.gif" alt=""></a></dt>
+					</dl>
+				</h3>
+				<!-- <a href="#" class="close"><img src="http://img.giftpop.vn/coupon/images/popupClose.png" alt="" /></a> -->
+			</div>
+			<div class="productGreyBack">
+                                                           <!--<img src="http://www.giftpop.info/upload/shBBS/" alt="" />-->
+                                                       
+            </div>
+			<div class="productGreyBack">
+				<img src="https://img.giftpop.vn/brand/GOGIHOUSE/MP1911260005_BASIC_coupon.jpg" alt="">
+			</div>
 
-    <div class = "tool-container">
-      <div class="col-1">Tool</div>
-        <select class="col-2" id="dtool">
-          <option value="line">Line</option>
-          <option value="triangleR">Right Triangle</option>
-          <option value="triangleI">Isosceles Triangle</option>
-          <option value="rect">Rectangle</option>
-          <option value="circle">Circle</option>
-          <option value="pencil">Pencil</option>
-          <option value="eraser">Eraser</option>
-        </select>
-    </div>
+			<div class="couponContents">
+				<h5>Gogi House</h5>
+				<h6>Phiếu quà tặng GoGi House 100k</h6>
+													<div class="barcode"><img src="http://img.giftpop.vn/coupon/images/used_barcode_vi.png"></div>
+					<!--<div class="barcodeNum">999-710-352-559</div>-->
+					<div class="barcodeNum">999-710-352-559</div>	
+								            </div>
+			<!--Binh-->
+						   
+            						
+            <div class="couponInfo">
+                <ul>
+					 
+					                    <!-- 메시지 -->
+                    <h3>Nội dung tin nhắn</h3>
+                    <li>Cảm ơn bạn đã mua hàng!</li>
 
-    <div class = "tool-container">
-      <div class="col-1">Line width</div>
-        <select class="col-2" id="linewidth">
-          <option value="lw1">1</option>
-          <option value="lw5">5</option>
-          <option value="lw10">10</option>
-          <option value="lw15">15</option>
-        </select>
-    </div>
+                    <!-- 유효기간 -->
+                    <h3>Hạn SD: 27/12/2019</h3>
+                    <!-- 매장 -->
+					
+                    <li>Áp dụng cho toàn bộ sản phẩm tại các cửa hàng được GoGi House chỉ định. Vui lòng xem thêm thông tin địa chỉ cửa hàng bên dưới.</li>
+																		<h3>Cửa hàng SD<a href="http://z.giftpop.vn/goodsView/StoreInfo.php?goodsid=MP1911260005&amp;lang=vn">+ Xem cửa hàng</a></h3>			
+												
+										
 
-    <div class = "tool-container">
-      <!-- Toggle Color Button -->
-      <div class="col-1">Color</div>
-      <div class="col-2" >
-        <img src="images/color-wheel.png" alt="Toggle Color" width="14" height="14" id="colorPick" title="Pick Color"/>
-      </div>
-      <!-- Color Table  -->
-      <div id="colorTable"></div>
-    </div>
+                    <!-- 상품 설명 -->
+                    <h3>Thông tin sản phẩm<a href="http://z.giftpop.vn/goodsView/VoucherInfo.php?goodsid=MP1911260005&amp;lang=vn">+ Xem thêm</a></h3>
+                    <li><p><span style="font-size: 16px;"><span style="font-family: arial, helvetica, sans-serif;">Phiếu quà tặng GoGi House với nhiều mệnh giá từ 100k đến 1000k sẽ là món quà ý nghĩa cho người thân, bạn bè, đối tác mỗi dịp Lễ, Tết hoặc các dịp đặc biệt, liên hoan, tiệc công ty, sum họp gia đình.<br>
+Phiếu quà tặng GoGi House áp dụng để mua được tất cả các món ăn truyền thống Hàn Quốc như: đậu hủ sốt GoGi, bánh xem Hàn Quốc, Teobokki nhân phô mai, Teobokki hải sản, canh rong biển, canh kim chi, miến trộn, mỳ lạnh, mì jajang, cơm trộn bát đá….giúp bạn tha hồ lựa chọn cho bữa tiệc của mình thêm đặc sắc và phong phú.</span></span><br>
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-3.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-5.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-6.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-7.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-8.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-2.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"></p>
+</li>
+                        
+                    <!-- 이미지 다운로드 -->
+                    <h3>Ảnh voucher <a href="http://img.giftpop.vn/img.php?V=QkozQUlsJTJGblMlMkZJbHlIaVNvcVZydlVBcw&amp;L=VN"> Tải về</a></h3>
+                   
 
-    <div class = "tool-container">
-      <div class="col-1">Current Color</div>
-      <div class="col-2">
-        <div  id="currentColor">
-        </div>
-      </div>
-    </div>
+                </ul>
+            </div>
+         </div> 
+     </div> 
+    	 <div id="coupon_en" style="width:100%;padding:0px;display:none">
+		<div class="inner">
+            <div class="header">
+									<h2><a style="display: block; position: relative;" href="https://www.giftpop.vn"> <img src="http://img.giftpop.vn/coupon/images/logo.png" alt="Giftpop Logo" style="width:80%"></a></h2>
+				                
+                <h3 class="popupFlag">
+                    <img src="http://www.giftpop.vn/resources_en/images/common/flag_eng.gif" alt="">
+                    <dl>
+						<dt style="top:0px;height: 30px;"><a onclick="goVr('vn')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_vietnam.gif" alt=""></a></dt>
+						<dt style="top:60px;height: 30px;"><a onclick="goVr('en')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_eng.gif" alt=""></a></dt>
+						<dt style="top:30px;height: 30px;"><a onclick="goVr('kr')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_korea.gif" alt=""></a></dt>
+                   </dl>
+                </h3>
+                <!-- <a href="#" class="close"><img src="http://img.giftpop.vn/coupon/images/popupClose.png" alt="" /></a> -->
+            </div>
+			<div class="productGreyBack">
+                                                           <!--<img src="http://www.giftpop.info/upload/shBBS/" alt="" />-->
+                                                       
+            </div>
+            <div class="productGreyBack">
+                <img src="https://img.giftpop.vn/brand/GOGIHOUSE/MP1911260005_BASIC_coupon.jpg" alt="">
+            </div>
+			  
+            <div class="couponContents">
+                    <h5>Gogi House</h5>
+                    <h6>GoGi House Cash voucher 100k</h6>
+														<div class="barcode"><img src="http://img.giftpop.vn/coupon/images/used_barcode_en.png"></div>
+                    <!--<div class="barcodeNum">999-710-352-559</div>-->
+					<div class="barcodeNum">999-710-352-559</div>
+								            </div>
+			<!--Binh-->
+						   
+            			
+			            <div class="couponInfo">
+                <ul>
+										                    <!-- 메시지 -->
+                    <h3>Gift Message</h3>
+                    <li>Cảm ơn bạn đã mua hàng!</li>
 
-    <div class = "tool-container">
-      <div class="col-1">Gridlines</div>
-      <div class="col-2">
-        <img src="images/off.png" width="60" height="16" id="gridSwitch" title="Show/Hide Gridlines"/>
-      </div>
-    </div>
+                    <!-- 유효기간 -->
+                    <h3>Expiry date: 27/12/2019</h3>
+					<!-- 매장 -->
+					
+                    <li>Apply for all stores which assigned by GoGi House. Please see the stores information below.</li>
+																		<h3>Available stores<a href="http://z.giftpop.vn/goodsView/StoreInfo.php?goodsid=MP1911260005&amp;lang=en">+ See the store</a></h3>
+												
+										                    
+                    <!-- 상품 설명 -->
+                    <h3>Product information<a href="http://z.giftpop.vn/goodsView/VoucherInfo.php?goodsid=MP1911260005&amp;lang=en">+ More</a></h3>
+                    <li><p><span style="font-size: 16px;"><span style="font-family: arial, helvetica, sans-serif;">GoGi House cash gift voucher denominations from 100k to 1000k will be present meaningful to give relatives, friends, partners and people are far from hometown who want to enjoy the taste of hometown on holidays, Tet or special occasion, party, family reunion.<br>
+GoGi House gift voucher is applied to buy all traditional Korean food as: GoGi tofu sauce, Korean cheesecake, Teobokki seafood, seaweed soup, kimchee soup, mixed noodle, Naengmyeon, jajang, mixed rice...make you easy to choose for your meal more diversified.</span></span><br>
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-3.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-5.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-6.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-7.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-8.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-2.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"></p>
+</li>
+                        
+                    <!-- 이미지 다운로드 -->
+                    <h3>Voucher image <a href="http://img.giftpop.vn/img.php?V=QkozQUlsJTJGblMlMkZJbHlIaVNvcVZydlVBcw&amp;L=EN"> DownLoad</a></h3>
+                 
 
-    <div class = "tool-container">
-      <div class="col-1">Clear All</div>
-      <div class="col-2" >
-        <img src="images/clear.png" width="16" height="16" id="clear" title="Clear the entire paper"/>
-      </div>
-    </div>
+                </ul>
+            </div>
+		</div> 
 
-    <div class = "tool-container">
-      <div class="col-1">Save Image</div>
-      <div class="col-2" >
-        <img src="images/save.png" width="16" height="16" onclick="saveImage()" id="save" title="Save image"/>
-      </div>
-    </div>
+	 </div> 
+    
+    	 <div id="coupon_kr" style="width:100%;padding:0px;display:none">
+         <div class="inner">
+            <div class="header">
+									<h2><a style="display: block; position: relative;" href="https://www.giftpop.vn"> <img src="http://img.giftpop.vn/coupon/images/logo.png" alt="Giftpop Logo" style="width:80%"></a></h2>
+				                
+                <h3 class="popupFlag">
+                    <img src="http://www.giftpop.vn/resources_en/images/common/flag_korea.gif" alt="">
+                    <dl>
+						<dt style="top:0px;height: 30px;"><a onclick="goVr('vn')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_vietnam.gif" alt=""></a></dt>
+						<dt style="top:60px;height: 30px;"><a onclick="goVr('en')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_eng.gif" alt=""></a></dt>
+						<dt style="top:30px;height: 30px;"><a onclick="goVr('kr')"><img src="http://www.giftpop.vn/resources_en/images/common/flag_korea.gif" alt=""></a></dt>
+                   </dl>
+                </h3>
+                <!-- <a href="#" class="close"><img src="http://img.giftpop.vn/coupon/images/popupClose.png" alt="" /></a> -->
+            </div>
+			<div class="productGreyBack">
+                                                           <!--<img src="http://www.giftpop.info/upload/shBBS/" alt="" />-->
+                                                       
+            </div>
+            <div class="productGreyBack">
+                <img src="https://img.giftpop.vn/brand/GOGIHOUSE/MP1911260005_BASIC_coupon.jpg" alt="">
+            </div>
+            <div class="couponContents">
+                <h5>Gogi House</h5>
+                <h6>GoGi House Cash voucher 100k</h6>
+													<div class="barcode"><img src="http://img.giftpop.vn/coupon/images/used_barcode_kr.png"></div>
+					<!--<div class="barcodeNum">999-710-352-559</div>-->
+					<div class="barcodeNum">999-710-352-559</div>
+								            </div>
+			<!--Binh-->
+						   
+            						 
+            <div class="couponInfo">
+                <ul>
+										                    <!-- 메시지 -->
+                    <h3>메세지 내용</h3>
+                    <li>Cảm ơn bạn đã mua hàng!</li>
 
-  </div>
+                    <!-- 유효기간 -->
+                    <h3>유효기간:  27/12/2019</h3>
 
-  <!-- Paint Area -->
-  <div id="container">
-    <canvas id="imageView" width="1000" height="500">
-      <p>Unfortunately, your browser is currently unsupported by our web application. We are sorry for the inconvenience.
-         Please use one of the supported browsers listed below, or draw the image you want using an offline tool.</p>
-         <p>Supported browsers:
-           <a href="http://www.opera.com">Opera</a>,
-           <a href="http://www.mozilla.com">Firefox</a>,
-           <a href="http://www.apple.com/safari">Safari</a>, and
-           <a href="http://www.konqueror.org">Konqueror</a>.
-         </p>
-    </canvas>
-    <canvas id="gridView" width="1000" height="500">
-    </canvas>
-  </div>
+                    <!-- 매장 -->		
+					
+                    <li>Apply for all stores which assigned by GoGi House. Please see the stores information below.</li>   
+																	<h3>사용매장<a href="http://z.giftpop.vn/goodsView/StoreInfo.php?goodsid=MP1911260005&amp;lang=kr">+ 상점 보기</a></h3>
+																						  <h3>상품설명<a href="http://z.giftpop.vn/goodsView/VoucherInfo.php?goodsid=MP1911260005&amp;lang=kr">+ 더 보기</a></h3>
+                            <li><p><span style="font-size: 16px;"><span style="font-family: arial, helvetica, sans-serif;">GoGi House cash gift voucher denominations from 100k to 1000k will be present meaningful to give relatives, friends, partners and people are far from hometown who want to enjoy the taste of hometown on holidays, Tet or special occasion, party, family reunion.<br>
+GoGi House gift voucher is applied to buy all traditional Korean food as: GoGi tofu sauce, Korean cheesecake, Teobokki seafood, seaweed soup, kimchee soup, mixed noodle, Naengmyeon, jajang, mixed rice...make you easy to choose for your meal more diversified.</span></span><br>
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-3.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-5.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-6.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-7.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-8.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<br style="font-family: arial, helvetica, sans-serif; font-size: 16px;">
+<img alt="" src="//www.giftpop.vn/upload/ckEditorFile/0/images/hinh-2.jpg" style="font-family: arial, helvetica, sans-serif; font-size: 16px;"></p>
+</li>
+                            
 
-  </body>
-</html>
+                    <!-- 상품 설명 -->
+                    <h3>상품설명<a href="http://z.giftpop.vn/goodsView/VoucherInfo.php?goodsid=MP1911260005&amp;lang=kr">+ 더 보기</a></h3>
+                    <li></li>
+                        
+                    <!-- 이미지 다운로드 -->
+                    <h3>쿠폰 이미지 <a href="http://img.giftpop.vn/img.php?V=QkozQUlsJTJGblMlMkZJbHlIaVNvcVZydlVBcw&amp;L=KR"> 다운로드</a></h3>
+                  
+                </ul>
+            </div>
+	    </div>
+	 </div> 
+
+    	 <div id="coupon_footer_vn" style="width:100%;padding:0px; ">
+         <div class="inner">
+			<br>
+            			<div style="text-align:center">
+                <a href="https://www.giftpop.vn/category/list/?category_code=A107&amp;brand_code=LOTTECINEMA" target="_blank"><img src="https://www.giftpop.vn/upload/shBBS/1595239777.jpg" alt="" style="width:90%"></a>
+            </div>
+			            			<div style="text-align:center">
+                <a href="https://www.giftpop.vn/brandshop/list?view&amp;brand_code=PAMPERME" target="_blank"><img src="https://www.giftpop.vn/upload/shBBS/1595239812.jpg" alt="" style="width:90%"></a>
+            </div>
+						            <!-- <div style="text-align:center">
+                <a href="https://www.giftpop.vn/promotion/sub_list/GIFTPOP201807" target='_blank'><img src="https://www.giftpop.vn/upload/shBBS/1531366846-3.jpg" alt="" style="width:90%"></a>
+            </div>
+            <div style="text-align:center">
+                <a href="https://www.giftpop.vn/promotion/sub_list/20180750_KM" target='_blank'><img src="https://www.giftpop.vn/upload/shBBS/1530778314-3.jpg" alt="" style="width:90%"></a>
+            </div> -->
+
+
+           
+	    </div>
+	 </div>
+	 	 <div id="coupon_footer_en" style="width:100%;padding:0px; display:none">
+         <div class="inner">
+			<br>
+            			<div style="text-align:center">
+                <a href="https://www.giftpop.vn/category/list/?category_code=A107&amp;brand_code=LOTTECINEMA" target="_blank"><img src="https://www.giftpop.vn/upload/shBBS/en_1595239777.jpg" alt="" style="width:90%"></a>
+            </div>
+			            			<div style="text-align:center">
+                <a href="https://www.giftpop.vn/brandshop/list?view&amp;brand_code=PAMPERME" target="_blank"><img src="https://www.giftpop.vn/upload/shBBS/en_1595239812.jpg" alt="" style="width:90%"></a>
+            </div>
+						            <!-- <div style="text-align:center">
+                <a href="https://www.giftpop.vn/promotion/sub_list/GIFTPOP201807" target='_blank'><img src="https://www.giftpop.vn/upload/shBBS/1531366846-3.jpg" alt="" style="width:90%"></a>
+            </div>
+            <div style="text-align:center">
+                <a href="https://www.giftpop.vn/promotion/sub_list/20180750_KM" target='_blank'><img src="https://www.giftpop.vn/upload/shBBS/1530778314-3.jpg" alt="" style="width:90%"></a>
+            </div> -->
+
+
+           
+	    </div>
+	 </div>
+	 	 <div id="coupon_footer_kr" style="width:100%;padding:0px; display:none">
+         <div class="inner">
+			<br>
+            			<div style="text-align:center">
+                <a href="https://www.giftpop.vn/category/list/?category_code=A107&amp;brand_code=LOTTECINEMA" target="_blank"><img src="https://www.giftpop.vn/upload/shBBS/en_1595239777.jpg" alt="" style="width:90%"></a>
+            </div>
+			            			<div style="text-align:center">
+                <a href="https://www.giftpop.vn/brandshop/list?view&amp;brand_code=PAMPERME" target="_blank"><img src="https://www.giftpop.vn/upload/shBBS/en_1595239812.jpg" alt="" style="width:90%"></a>
+            </div>
+						            <!-- <div style="text-align:center">
+                <a href="https://www.giftpop.vn/promotion/sub_list/GIFTPOP201807" target='_blank'><img src="https://www.giftpop.vn/upload/shBBS/1531366846-3.jpg" alt="" style="width:90%"></a>
+            </div>
+            <div style="text-align:center">
+                <a href="https://www.giftpop.vn/promotion/sub_list/20180750_KM" target='_blank'><img src="https://www.giftpop.vn/upload/shBBS/1530778314-3.jpg" alt="" style="width:90%"></a>
+            </div> -->
+
+
+           
+	    </div>
+	 </div>
+		<div class="inner">
+			 <div>
+				 					<a href="tel:1900558812" style="width: 100%;text-align: center;display: block; padding-top: 10px;color: #ed1c24;padding-bottom: 10px;">Hotline <span style="color: #ed1c24;font-weight:600">1900 55 88 12</span></a>
+					<p style="text-align:center"><a href="https://www.giftpop.vn/" target="_blank"><img src="http://img.giftpop.vn/coupon/images/logo.png" alt="Giftpop Logo" style="    padding: 10px 0 18px;"></a></p>
+					            </div>
+		</div>
+
+	</div>
+
+
+
+
+
+<script>
+
+    function goVr(lang){
+        if(lang=="vn"){
+			$('#Lang').val("vn");
+            $("#coupon_vn").show();
+            $("#coupon_en").hide();
+            $("#coupon_kr").hide();
+            $("#coupon_use").hide();
+			 $("#coupon_footer_vn").show();
+            $("#coupon_footer_en").hide();
+            $("#coupon_footer_kr").hide();
+            //$("#coupon_footer").hide();
+        }
+        if(lang=="en"){
+			$('#Lang').val("en");
+            $("#coupon_vn").hide();
+            $("#coupon_en").show(); 
+            $("#coupon_kr").hide();
+            $("#coupon_use").hide();
+			$("#coupon_footer_vn").hide();
+            $("#coupon_footer_en").show();
+            $("#coupon_footer_kr").hide();
+            //$("#coupon_footer").hide();
+        }
+        if(lang=="kr"){
+			$('#Lang').val("kr");
+            $("#coupon_vn").hide();
+            $("#coupon_en").hide();
+            $("#coupon_kr").show();
+            $("#coupon_use").hide();
+			$("#coupon_footer_vn").hide();
+            $("#coupon_footer_en").hide();
+            $("#coupon_footer_kr").show();
+            //$("#coupon_footer").hide();
+        }
+        if(lang=="use"){
+            $("#coupon_vn").hide();
+            $("#coupon_en").hide();
+            $("#coupon_kr").hide();
+            $("#coupon_footer").hide();
+            $("#coupon_use").show();
+			$("#coupon_footer_vn").hide();
+            $("#coupon_footer_en").hide();
+            $("#coupon_footer_kr").hide();
+        }
+        if(lang=="close"){
+			var Lang = $('#Lang').val();
+            $("#coupon_vn").hide();
+            $("#coupon_en").hide();
+            $("#coupon_kr").hide();
+            $("#coupon_footer").show();
+            $("#coupon_use").hide();
+            $("#coupon_"+Lang).show();
+			$("#coupon_footer_vn").hide();
+            $("#coupon_footer_en").hide();
+            $("#coupon_footer_kr").hide();
+        }
+    }
+
+    function goUse(){
+        var scode = $("#stroeCode").val();
+        if(scode == ""){
+            alert('\n Pleace enter the unique code number of your store!');
+            $("#stroeCode").focus();
+        }else if(scode == "12345"){
+            alert('\n Success\n\n Mobile voucher exchange processing is completed!');
+            goVr('en');
+            $("[id^='redeem']").hide();
+        }else{
+            alert('\n Error\n\n The number you entered is an unregistered number!\n\n Try again.');
+            $("#stroeCode").select();
+        }
+    }
+               $("[id^='redeem']").hide();
+      	</script></body></html>
